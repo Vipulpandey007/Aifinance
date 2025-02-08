@@ -42,9 +42,9 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="">
+          <Link href="https://vipulpandey007.github.io/vipul-portfolio-react/">
             <Button size="lg" variant="outline" className="px-8">
-              Watch Demo
+              About me
             </Button>
           </Link>
         </div>
