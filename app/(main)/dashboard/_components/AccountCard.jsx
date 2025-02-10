@@ -2,7 +2,6 @@
 
 import { ArrowUpRight, ArrowDownRight, CreditCard } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
-import { Badge } from "@/components/ui/badge";
 import { useEffect } from "react";
 import useFetch from "@/hooks/use-fetch";
 import {
@@ -27,11 +26,11 @@ export function AccountCard({ account }) {
   } = useFetch(updateDefaultAccount);
 
   const handleDefaultChange = async (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent navigation
 
     if (isDefault) {
       toast.warning("You need atleast 1 default account");
-      return;
+      return; // Don't allow toggling off the default account
     }
 
     await updateDefaultFn(id);
