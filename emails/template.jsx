@@ -12,7 +12,7 @@ import {
 // Dummy data for preview
 const PREVIEW_DATA = {
   monthlyReport: {
-    userName: "John Doe",
+    userName: "Vipul Pandey",
     type: "monthly-report",
     data: {
       month: "December",
@@ -35,7 +35,7 @@ const PREVIEW_DATA = {
     },
   },
   budgetAlert: {
-    userName: "John Doe",
+    userName: "Vipul Pandey",
     type: "budget-alert",
     data: {
       percentageUsed: 85,
@@ -47,7 +47,7 @@ const PREVIEW_DATA = {
 
 export default function EmailTemplate({
   userName = "",
-  type = "monthly-report",
+  type = "budget-alert",
   data = {},
 }) {
   if (type === "monthly-report") {
