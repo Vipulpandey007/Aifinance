@@ -1,7 +1,8 @@
 import { getUserAccounts } from "@/actions/dashboard";
 import { defaultCategories } from "@/data/categories";
-import { AddTransactionForm } from "../_components/transaction-form";
-// import { getTransaction } from "@/actions/transaction";
+
+import { getTransaction } from "@/actions/transaction";
+import { AddTransactionForm } from "../_components/AddTransactionForm";
 
 export default async function AddTransactionPage({ searchParams }) {
   const accounts = await getUserAccounts();
@@ -18,12 +19,12 @@ export default async function AddTransactionPage({ searchParams }) {
       <div className="flex justify-center md:justify-normal mb-8">
         <h1 className="text-5xl gradient-title ">Add Transaction</h1>
       </div>
-      {/* <AddTransactionForm
+      <AddTransactionForm
         accounts={accounts}
         categories={defaultCategories}
         editMode={!!editId}
         initialData={initialData}
-      /> */}
+      />
     </div>
   );
 }
